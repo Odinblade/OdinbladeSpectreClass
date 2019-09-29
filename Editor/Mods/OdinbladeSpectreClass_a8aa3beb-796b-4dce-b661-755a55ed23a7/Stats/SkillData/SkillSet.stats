@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="68e50044-f0bd-499d-94ad-7aa52f7abe18">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Preset_Skills" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_OdinSpectre_InflictAgony" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Preset_Skills_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Projectile_OdinSpectre_EssenceBolt" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="OdinSpectre_Preset_Skills" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="New_Stat_0" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Shout_OdinSpectre_UnholyRitual" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="OdinSpectre_Preset_Skills" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinSpectre_SpectralBanshee" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Target_OdinSpectre_Summon_InflictAgony" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="true">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="Summon_OdinSpectre_SpectralBanshee_substat" />
+        <field name="Skills" type="StatReferenceStatObjectFieldDefinition" stat_name="Cone_OdinSpectre_Summon_BansheeShriek" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="Summon_OdinSpectre_SpectralBanshee" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

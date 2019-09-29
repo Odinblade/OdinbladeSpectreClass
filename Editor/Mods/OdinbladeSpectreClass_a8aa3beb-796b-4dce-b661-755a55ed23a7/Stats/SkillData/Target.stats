@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e988a674-28fe-49d2-a6ce-c5c1e0141f4c">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_InflictAgony" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="65" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="8" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 1" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_InflictAgony" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Inflict Agony" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Blight the target, dealing [1] and applying a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may be afflicted with up to five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, each dealing &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; on apply and on each turn: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1 stack&lt;/font&gt;: [2] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;2 stacks&lt;/font&gt;: [3] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: [4] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: [5] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: [6]" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Agony1:Damage;Weapon:Damage_OdinSpectre_Agony2:Damage;Weapon:Damage_OdinSpectre_Agony3:Damage;Weapon:Damage_OdinSpectre_Agony4:Damage;Weapon:Damage_OdinSpectre_Agony5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Purge" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="80" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5_REMOVED,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_PURGED4,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_PURGED3,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_PURGED2,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_PURGED1,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 1" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Purge" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Purge" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Shatter a portion of the target's soul, dealing [1]. &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;Purges&lt;/font&gt; all stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, dealing additional &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; based on the number of stacks removed this way: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1 stack&lt;/font&gt;: [2] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;2 stacks&lt;/font&gt;: [3] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: [4] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: [5] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: [6] &lt;br&gt;&lt;br&gt;If five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; are purged this way, the cooldown of &lt;font color=&quot;#67ffdd&quot;&gt;Inflict Agony&lt;/font&gt; is immediately reset." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Purged1:Damage;Weapon:Damage_OdinSpectre_Purged2:Damage;Weapon:Damage_OdinSpectre_Purged3:Damage;Weapon:Damage_OdinSpectre_Purged4:Damage;Weapon:Damage_OdinSpectre_Purged5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_02:Dummy_Root;OdinSpectre_Hand_02:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Languish" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="DECAYING_TOUCH,100,2;OdinSpectre_WITHER,100,2;IF(Enemy):OdinSpectre_PROC_AGONY,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 1" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Languish" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Languish" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Enfeeble the target, causing them to &lt;font color=&quot;#b823cb&quot;&gt;Decay&lt;/font&gt; and &lt;font color=&quot;#67ffdd&quot;&gt;Wither&lt;/font&gt;. &lt;br&gt;&lt;br&gt;Heals cast on characters who are &lt;font color=&quot;#b823cb&quot;&gt;Decaying&lt;/font&gt; are instead converted into &lt;font color=&quot;#a8a8a8&quot;&gt;physical damage&lt;/font&gt;. &lt;br&gt;&lt;br&gt;Characters who are &lt;font color=&quot;#67ffdd&quot;&gt;Withered&lt;/font&gt; are afflicted with &lt;font color=&quot;#c80030&quot;&gt;[1]% Movement Speed&lt;/font&gt; and &lt;font color=&quot;#c80030&quot;&gt;[2]% Accuracy&lt;/font&gt;. &lt;br&gt;&lt;br&gt;Applies a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;. A target may be afflicted with up to five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, each dealing &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; on apply and on each turn." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Wither:MovementSpeedBoost;Potion:Stats_OdinSpectre_Wither:AccuracyBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_02:Dummy_Root;OdinSpectre_Hand_02:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Corruption" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="78" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="9" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="DISEASED,100,1;IF(Enemy):OdinSpectre_PROC_AGONY,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="10" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;!Ally;" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Corruption" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Corruption" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Conjure a wicked blast, dealing [1] to enemies in target area. Applies &lt;font color=&quot;#c9aa58&quot;&gt;Diseased&lt;/font&gt; and a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may be afflicted with up to five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, each dealing &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; on apply and on each turn." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;AreaRadius;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Curse_Vulnerable" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_CURSE_VULNERABLE,100,3;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_CURSE_VULNERABLE,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_CURSE_VULNERABLE,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_CURSE_VULNERABLE,100,1;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_CURSE_VULNERABLE,100,1;TARGET:IF((Enemy)&amp;((!HasStatus:OdinSpectre_AGONY2)&amp;(!HasStatus:OdinSpectre_AGONY3)&amp;(!HasStatus:OdinSpectre_AGONY4)&amp;(!HasStatus:OdinSpectre_AGONY5))):OdinSpectre_CURSE_VULNERABLE,100,1;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 2" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Curse_Vulnerable" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Curse of Vulnerability" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Apply a &lt;font color=&quot;#b823cb&quot;&gt;Vulnerability Curse&lt;/font&gt; and a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; on the target. A character afflicted with the &lt;font color=&quot;#b823cb&quot;&gt;Vulnerability Curse&lt;/font&gt; will have &lt;font color=&quot;#c80030&quot;&gt;[1]% Piercing Resistance&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may only be afflicted by one &lt;font color=&quot;#b823cb&quot;&gt;Curse&lt;/font&gt; at a time and its duration is determined by the number of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks on the target: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1-2 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;1 turn&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3-4 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;2 turns&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;3 turns&lt;/font&gt;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Curse_Vulnerable:PiercingResistance;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_04,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Curse_Weakness" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_CURSE_WEAKNESS,100,3;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_CURSE_WEAKNESS,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_CURSE_WEAKNESS,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_CURSE_WEAKNESS,100,1;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_CURSE_WEAKNESS,100,1;TARGET:IF((Enemy)&amp;((!HasStatus:OdinSpectre_AGONY2)&amp;(!HasStatus:OdinSpectre_AGONY3)&amp;(!HasStatus:OdinSpectre_AGONY4)&amp;(!HasStatus:OdinSpectre_AGONY5))):OdinSpectre_CURSE_WEAKNESS,100,1;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Curse_Weakness" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Curse of Weakness" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Apply a &lt;font color=&quot;#b823cb&quot;&gt;Weakness Curse&lt;/font&gt; and a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; on the target. A character afflicted with the &lt;font color=&quot;#b823cb&quot;&gt;Weakness Curse&lt;/font&gt; will deal &lt;font color=&quot;#c9aa58&quot;&gt;[1]% Damage&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may only be afflicted by one &lt;font color=&quot;#b823cb&quot;&gt;Curse&lt;/font&gt; at a time and its duration is determined by the number of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks on the target: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1-2 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;1 turn&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3-4 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;2 turns&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;3 turns&lt;/font&gt;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Curse_Weakness:DamageBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_04,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Curse_Ineptness" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_CURSE_INEPT,100,3;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_CURSE_INEPT,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_CURSE_INEPT,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_CURSE_INEPT,100,1;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_CURSE_INEPT,100,1;TARGET:IF((Enemy)&amp;((!HasStatus:OdinSpectre_AGONY2)&amp;(!HasStatus:OdinSpectre_AGONY3)&amp;(!HasStatus:OdinSpectre_AGONY4)&amp;(!HasStatus:OdinSpectre_AGONY5))):OdinSpectre_CURSE_INEPT,100,1;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 4" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Curse_Inept" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Curse of Ineptness" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Apply an &lt;font color=&quot;#b823cb&quot;&gt;Ineptness Curse&lt;/font&gt; and a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; on the target. A character afflicted with the &lt;font color=&quot;#b823cb&quot;&gt;Ineptness Curse&lt;/font&gt; will spend an &lt;font color=&quot;#c9aa58&quot;&gt;additional [1] AP per action&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may only be afflicted by one &lt;font color=&quot;#b823cb&quot;&gt;Curse&lt;/font&gt; at a time and its duration is determined by the number of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks on the target: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1-2 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;1 turn&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3-4 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;2 turns&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;3 turns&lt;/font&gt;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Curse_Inept:APCostBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_04,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_UnderhandedBargain" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="SELF:OdinSpectre_UNDERHANDEDBARGAIN,100,2;TARGET:IF(Enemy):OdinSpectre_PROC_UNDERHANDED,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;Enemy&amp;((HasStatus:OdinSpectre_AGONY5)|(HasStatus:OdinSpectre_AGONY4)|(HasStatus:OdinSpectre_AGONY3));" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_UnderhandedBargain" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Underhanded Bargain" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Target an enemy with &lt;font color=&quot;#67ffdd&quot;&gt;three or more Agony&lt;/font&gt;. Remove &lt;font color=&quot;#67ffdd&quot;&gt;three Agony&lt;/font&gt; stacks from the target, dealing on-apply damage of the new count. &lt;br&gt;&lt;br&gt;In exchange, you gain &lt;font color=&quot;#40b606&quot;&gt;2AP&lt;/font&gt; immediately and &lt;font color=&quot;#40b606&quot;&gt;[1] Initiative&lt;/font&gt; for 2 turns." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_UnderhandedBargain:Initiative;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_02:Dummy_Root;OdinSpectre_Hand_02:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_CruelIntent" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="92" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="12" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PERISH,100,3;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_PERISH,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_PERISH,100,1;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;!Ally;" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_CruelIntent" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Cruel Intent" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deal [1] and apply a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; to the target. Then if the target has three or more stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, they begin to &lt;font color=&quot;#67ffdd&quot;&gt;Perish&lt;/font&gt;, causing &lt;font color=&quot;#c80030&quot;&gt;[2] Constitution&lt;/font&gt;, &lt;font color=&quot;#c80030&quot;&gt;[3] Wits&lt;/font&gt;, and &lt;font color=&quot;#c80030&quot;&gt;[4]% Physical Resistance&lt;/font&gt;. &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;Perish&lt;/font&gt;'s duration is determined by the number of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks on the target: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;1 turn&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;2 turns&lt;/font&gt; &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: &lt;font color=&quot;#c9aa58&quot;&gt;3 turns&lt;/font&gt;" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Potion:Stats_OdinSpectre_Perish:Constitution;Potion:Stats_OdinSpectre_Perish:Wits;Potion:Stats_OdinSpectre_Perish:PhysicalResistance;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_AnnihilatingPurge" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="78" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="8" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5_REMOVED,100,0;IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5,100,0;IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_PURGED4,100,0;IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_PURGED3,100,0;IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_PURGED2,100,0;IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_PURGED1,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="10" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 5" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;!Ally;" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_AnnihilatingPurge" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Annihilating Purge" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Cast a devastating spell at target area, dealing [1] and applying a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; to all enemies.&lt;br&gt;&lt;br&gt;Then &lt;font color=&quot;#67ffdd&quot;&gt;Purge&lt;/font&gt; all stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, dealing additional &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; based on the number of stacks removed this way: &lt;br&gt;&lt;br&gt;1 stack: [2] &lt;br&gt;2 stacks: [3] &lt;br&gt;3 stacks: [4] &lt;br&gt;4 stacks: [5] &lt;br&gt;5 stacks: [6] &lt;br&gt;&lt;br&gt;If five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; are purged from a single target, the cooldown of &lt;font color=&quot;#67ffdd&quot;&gt;Inflict Agony&lt;/font&gt; is immediately reset." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Purged1:Damage;Weapon:Damage_OdinSpectre_Purged2:Damage;Weapon:Damage_OdinSpectre_Purged3:Damage;Weapon:Damage_OdinSpectre_Purged4:Damage;Weapon:Damage_OdinSpectre_Purged5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_SeedOfMalice" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="90" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="8" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinSpectre_SEEDOFMALICE,100,3;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;!Ally;" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_SeedOfMalice" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Seed of Malice" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deal [1] and embed a &lt;font color=&quot;#67ffdd&quot;&gt;Seed of Malice&lt;/font&gt; into the target for 3 turns, afflicting them with &lt;font color=&quot;#c80030&quot;&gt;[3]% Piercing Resistance&lt;/font&gt;.&lt;br&gt;&lt;br&gt;Upon death or after one turn, the character will explode, dealing [2] in a 5m radius, applying &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; to the target and each enemy hit in the area. &lt;br&gt;&lt;br&gt;Whenever a fifth stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; is applied to the character they will explode early." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Skill:Projectile_OdinSpectre_SeedOfMalice_Explode:Damage;Potion:Stats_OdinSpectre_SeedOfMalice:PiercingResistance;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_SpreadTheSickness" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="TARGET:IF(Enemy):OdinSpectre_PROC_CURSE_AURA,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):EXPLODE,100,0,Projectile_OdinSpectre_ProcProj_Agony5;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):EXPLODE,100,0,Projectile_OdinSpectre_ProcProj_Agony4;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):EXPLODE,100,0,Projectile_OdinSpectre_ProcProj_Agony3;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):EXPLODE,100,0,Projectile_OdinSpectre_ProcProj_Agony2;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):EXPLODE,100,0,Projectile_OdinSpectre_ProcProj_Agony1;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 4" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf;Enemy&amp;((HasStatus:OdinSpectre_AGONY5)|(HasStatus:OdinSpectre_AGONY4)|(HasStatus:OdinSpectre_AGONY3)|(HasStatus:OdinSpectre_AGONY2)|(HasStatus:OdinSpectre_AGONY1));" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_SpreadTheSickness" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Spread the Sickness" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Target an enemy with &lt;font color=&quot;#67ffdd&quot;&gt;one or more Agony&lt;/font&gt;. Deal [1] and apply a random &lt;font color=&quot;#b823cb&quot;&gt;Curse Aura&lt;/font&gt; to them lasting 3 turns, spreading the &lt;font color=&quot;#b823cb&quot;&gt;Curse&lt;/font&gt; to enemies within 6m. &lt;br&gt;&lt;br&gt;Refresh all stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; the target has and spread them to all enemies within 6m, dealing the on-apply damage to each enemy afflicted this way: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1 stack&lt;/font&gt;: [2] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;2 stacks&lt;/font&gt;: [3] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: [4] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: [5] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: [6]" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Skill:Projectile_OdinSpectre_Proc_SpreadTheSickness:Damage;Weapon:Damage_OdinSpectre_Agony1:Damage;Weapon:Damage_OdinSpectre_Agony2:Damage;Weapon:Damage_OdinSpectre_Agony3:Damage;Weapon:Damage_OdinSpectre_Agony4:Damage;Weapon:Damage_OdinSpectre_Agony5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_TerribleFate" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="97" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="9" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="TARGET:IF(Enemy):OdinSpectre_PROC_TERRIBLEFATE,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 5" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_TerribleFate" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Terrible Fate" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Deal [1] and if the target has no &lt;font color=&quot;#a8a8a8&quot;&gt;Physical Armour&lt;/font&gt; they will become &lt;font color=&quot;c9aa58&quot;&gt;Terrified&lt;/font&gt;, causing them to run around in fear for 1 turn. &lt;br&gt;&lt;br&gt;Removes all stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; from the target. Then, the target is afflicted with a random number of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks, dealing &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; on apply and on each turn: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1 stack&lt;/font&gt;: [2] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;2 stacks&lt;/font&gt;: [3] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: [4] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: [5] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: [6]" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Agony1:Damage;Weapon:Damage_OdinSpectre_Agony2:Damage;Weapon:Damage_OdinSpectre_Agony3:Damage;Weapon:Damage_OdinSpectre_Agony4:Damage;Weapon:Damage_OdinSpectre_Agony5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_02:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_SoulExtraction" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="-1" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="TARGET:IF(Dead):EXPLODE,100,0;SELF:OdinSpectre_ASCENDED,100,2;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5_REMOVED,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY5)&amp;(Enemy)):OdinSpectre_PURGED5,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY4)&amp;(Enemy)):OdinSpectre_PURGED4,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY3)&amp;(Enemy)):OdinSpectre_PURGED3,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY2)&amp;(Enemy)):OdinSpectre_PURGED2,100,0;TARGET:IF((HasStatus:OdinSpectre_AGONY1)&amp;(Enemy)):OdinSpectre_PURGED1,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 5" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="NonSelf;((Dead)&amp;(CanExplode))|Enemy&amp;(HasStatus:OdinSpectre_AGONY5);" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_SoulExtraction" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Soul Extraction" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Steal the soul from target corpse or an enemy with &lt;font color=&quot;#67ffdd&quot;&gt;five Agony stacks&lt;/font&gt; and gain &lt;font color=&quot;#67ffdd&quot;&gt;Ascended&lt;/font&gt;, reducing the cost of all &lt;font color=&quot;#46b195&quot;&gt;Source&lt;/font&gt; skills by 1 for 2 turns. &lt;br&gt;&lt;br&gt;May only be used once per combat. &lt;br&gt;&lt;br&gt;This skill also &lt;font color=&quot;#67ffdd&quot;&gt;Purges&lt;/font&gt; all stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, dealing additional &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; based on the number of stacks removed this way: &lt;br&gt;&lt;br&gt;1 stack: [2] &lt;br&gt;2 stacks: [3] &lt;br&gt;3 stacks: [4] &lt;br&gt;4 stacks: [5] &lt;br&gt;5 stacks: [6] &lt;br&gt;&lt;br&gt;If five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; are purged this way, the cooldown of &lt;font color=&quot;#67ffdd&quot;&gt;Inflict Agony&lt;/font&gt; is immediately reset." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Purged1:Damage;Weapon:Damage_OdinSpectre_Purged2:Damage;Weapon:Damage_OdinSpectre_Purged3:Damage;Weapon:Damage_OdinSpectre_Purged4:Damage;Weapon:Damage_OdinSpectre_Purged5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_02:Dummy_Root;OdinSpectre_Hand_02:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_RaiseSpectralBanshee" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="Summon,c004773f-6dbe-4678-8e76-aa034423d8c8,10,-,Target_DummyTargetSkill;EXPLODE,100,1" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 1" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Dead;!Item;CanExplode" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_RaiseSpectralBanshee" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Raise Spectral Banshee" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Manifest the soul of target corpse into a &lt;font color=&quot;#67ffdd&quot;&gt;Spectral Banshee&lt;/font&gt;. The &lt;font color=&quot;#67ffdd&quot;&gt;Banshee&lt;/font&gt; is a fragile caster who can increment &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt; stacks and &lt;font color=&quot;#ffffff&quot;&gt;Deafen&lt;/font&gt; foes." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_04,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_target_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_03:root:cast" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Summon_InflictAgony" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="Damage Multiplier" type="IntegerStatObjectFieldDefinition" value="65" />
+        <field name="Damage Range" type="IntegerStatObjectFieldDefinition" value="8" />
+        <field name="DamageType" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="Damage Type" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="IF(Enemy):OdinSpectre_PROC_AGONY,100,0;" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="13" />
+        <field name="AddWeaponRange" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="CanTargetTerrain" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Character;NonSelf" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_InflictAgony" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Inflict Agony" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Blight the target, dealing [1] and applying a stack of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;. &lt;br&gt;&lt;br&gt;A target may be afflicted with up to five stacks of &lt;font color=&quot;#67ffdd&quot;&gt;Agony&lt;/font&gt;, each dealing &lt;font color=&quot;#c80030&quot;&gt;piercing damage&lt;/font&gt; on apply and on each turn: &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;1 stack&lt;/font&gt;: [2] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;2 stacks&lt;/font&gt;: [3] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;3 stacks&lt;/font&gt;: [4] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;4 stacks&lt;/font&gt;: [5] &lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;5 stacks&lt;/font&gt;: [6]" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Damage;Weapon:Damage_OdinSpectre_Agony1:Damage;Weapon:Damage_OdinSpectre_Agony2:Damage;Weapon:Damage_OdinSpectre_Agony3:Damage;Weapon:Damage_OdinSpectre_Agony4:Damage;Weapon:Damage_OdinSpectre_Agony5:Damage;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastSelfAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_voodoo_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Cast_01:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+        <field name="IsEnemySkill" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="TargetGroundEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Impact_01:root:cast" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

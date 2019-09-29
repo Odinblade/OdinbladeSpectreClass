@@ -1,0 +1,2 @@
+new itemcolor "OdinSpectre_PresetColor","FF5C5C5C","FF000000","FF6D998A"
+

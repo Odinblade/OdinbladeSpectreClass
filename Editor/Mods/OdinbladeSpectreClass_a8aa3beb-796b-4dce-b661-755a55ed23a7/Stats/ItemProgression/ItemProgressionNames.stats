@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="a46ee13b-92c9-474f-9b83-2561b63cf414">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_ImprovisedScythe" />
+        <field name="ItemName" type="TranslatedStringStatObjectFieldDefinition" value="Improvised Scythe" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="A Spectre's signature weapon." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_UncommonScythe" />
+        <field name="ItemName" type="TranslatedStringStatObjectFieldDefinition" value="Cruel Scythe" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="A Spectre's signature weapon." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_CommonScythe" />
+        <field name="ItemName" type="TranslatedStringStatObjectFieldDefinition" value="Spectre Scythe" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="A Spectre's signature weapon." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_RareScythe" />
+        <field name="ItemName" type="TranslatedStringStatObjectFieldDefinition" value="Wicked Scythe" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="A Spectre's signature weapon." />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_EpicScythe" />
+        <field name="ItemName" type="TranslatedStringStatObjectFieldDefinition" value="Malefic Scythe" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="A Spectre's signature weapon." />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

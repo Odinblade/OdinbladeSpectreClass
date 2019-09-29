@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="239de60a-29b5-4010-bf7d-f6169d4ddd8a">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinSpectre_Preset_UpperBody" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageUpperBody" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Witch_UpperBody" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinSpectre_Preset_LowerBody" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageLowerBody" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Witch_LowerBody" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinSpectre_Preset_Gloves" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageGloves" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Witch_Gloves" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinSpectre_Preset_Boots" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageBoots" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Witch_Boots" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_OdinSpectre_Preset_Helmet" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageHelmet" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="ARM_Witch_Helmet" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="ActPart" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="ARM_UNIQUE_OdinSpectre_Gloves_1" />
+        <field name="Using" type="BaseClassStatObjectFieldDefinition" value="_MageGloves" />
+        <field name="ItemGroup" type="StringStatObjectFieldDefinition" value="EMPTY" />
+        <field name="Act part" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="ActPart" />
+        <field name="MagicArmorBoost" type="IntegerStatObjectFieldDefinition" value="20" />
+        <field name="Value" type="IntegerStatObjectFieldDefinition" value="180" />
+        <field name="Skills" type="StringStatObjectFieldDefinition" value="Shout_OdinSpectre_EtherealVeil" />
+        <field name="ComboCategory" type="StringStatObjectFieldDefinition" value="Gloves" />
+        <field name="Unique" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="IntelligenceBoost" type="EnumerationStatObjectFieldDefinition" value="12" enumeration_type_name="Penalty Qualifier" />
+        <field name="WarriorLore" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="ItemColor" type="StringStatObjectFieldDefinition" value="OdinSpectre_PresetColor" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

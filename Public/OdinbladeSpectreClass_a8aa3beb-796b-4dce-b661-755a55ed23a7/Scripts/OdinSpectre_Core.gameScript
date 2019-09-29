@@ -1,0 +1,297 @@
+INIT
+CHARACTER:%Caster=null
+
+EVENTS
+//SKILL -> StoreSkillCasters
+EVENT OdinSpectre_StoreCaster
+VARS
+CHARACTER:_Caster
+
+ON
+	//CONE
+	OnSkillCast(_Caster, Cone_OdinSpectre_Bonechill)
+	OnSkillCast(_Caster, Cone_OdinSpectre_Summon_BansheeShriek)
+	//JUMP
+	OnSkillCast(_Caster, Jump_OdinSpectre_Riftwalk)
+	//PROJECTILE
+	OnSkillCast(_Caster, Projectile_OdinSpectre_TormentedVolley)
+	OnSkillCast(_Caster, Projectile_OdinSpectre_EssenceBolt)
+	OnSkillCast(_Caster, Projectile_OdinSpectre_SoulPierce)
+	OnSkillCast(_Caster, Projectile_OdinSpectre_ConduitOfTheCruel)
+	//PROJECTILE_STRIKE
+	OnSkillCast(_Caster, ProjectileStrike_OdinSpectre_AgonyBolt)
+	//STORM
+	OnSkillCast(_Caster, Storm_OdinSpectre_AgonyOfTheDamned)
+	//TARGET
+	OnSkillCast(_Caster, Target_OdinSpectre_InflictAgony)
+	OnSkillCast(_Caster, Target_OdinSpectre_Summon_InflictAgony)
+	OnSkillCast(_Caster, Target_OdinSpectre_Purge)
+	OnSkillCast(_Caster, Target_OdinSpectre_Corruption)
+	OnSkillCast(_Caster, Target_OdinSpectre_Curse_Vulnerable)
+	OnSkillCast(_Caster, Target_OdinSpectre_Curse_Weakness)
+	OnSkillCast(_Caster, Target_OdinSpectre_Curse_Ineptness)
+	OnSkillCast(_Caster, Target_OdinSpectre_UnderhandedBargain)
+	OnSkillCast(_Caster, Target_OdinSpectre_CruelIntent)
+	OnSkillCast(_Caster, Target_OdinSpectre_AnnihilatingPurge)
+	OnSkillCast(_Caster, Target_OdinSpectre_SpreadTheSickness)
+	OnSkillCast(_Caster, Target_OdinSpectre_TerribleFate)
+ACTIONS
+	Set(%Caster, _Caster)
+
+//SKILL -> PurgeFifthAgony
+EVENT OdinSpectre_PurgeFifthAgony
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character, OdinSpectre_PURGED5_REMOVED)
+ACTIONS
+	CharacterRemoveSkill(%Caster, Target_OdinSpectre_InflictAgony)
+	CharacterAddSkill(%Caster, Target_OdinSpectre_InflictAgony, 0)
+
+//SKILL -> UnderhandedBargain
+EVENT OdinSpectre_UnderhandedBargain
+VARS
+CHARACTER:_Character
+CHARACTER:_Caster
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_PROC_UNDERHANDED)
+ACTIONS
+IF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY5)
+THEN
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY5)
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY2, 2, 1, %Caster)
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY4)
+THEN
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY4)
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY1, 2, 1, %Caster)
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY3)
+THEN
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY3)
+ENDIF
+
+//SKILL -> SeedOfMalice
+EVENT OdinSpectre_SeedOfMalice
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character, OdinSpectre_AGONY5)
+ACTIONS
+IF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_SEEDOFMALICE)
+THEN
+	CharacterRemoveStatus(_Character, OdinSpectre_SEEDOFMALICE)
+ENDIF
+
+//SKILL -> SpreadTheSickness
+EVENT OdinSpectre_SpreadTheSickness_Curse
+VARS
+CHARACTER:_Character
+STATUS:_Curse
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_PROC_CURSE_AURA)
+ACTIONS
+	GetRandom(_Curse, OdinSpectre_CURSE_VULNERABLE_AURA, OdinSpectre_CURSE_WEAKNESS_AURA, OdinSpectre_CURSE_INEPT_AURA)
+	CharacterApplyStatus(_Character, _Curse, 2)
+
+//SKILL -> TerribleFate
+EVENT OdinSpectre_TerribleFate
+VARS
+CHARACTER:_Character
+STATUS:_Agony
+FLOAT:_Armour
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_PROC_TERRIBLEFATE)
+ACTIONS
+IF "c1|c2|c3|c4|c5"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY1)
+	CharacterHasStatus(_Character, OdinSpectre_AGONY2)
+	CharacterHasStatus(_Character, OdinSpectre_AGONY3)
+	CharacterHasStatus(_Character, OdinSpectre_AGONY4)
+	CharacterHasStatus(_Character, OdinSpectre_AGONY5)
+THEN
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY1)
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY2)
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY3)
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY4)
+	CharacterRemoveStatus(_Character, OdinSpectre_AGONY5)
+ENDIF
+	GetRandom(_Agony, OdinSpectre_AGONY1, OdinSpectre_AGONY2, OdinSpectre_AGONY3, OdinSpectre_AGONY4, OdinSpectre_AGONY5)
+	CharacterApplyStatus(_Character, _Agony, 2, 0, %Caster)
+IF "c1&c2"
+	CharacterGetStat(_Armour, _Character, PhysicalArmorPoints)
+	IsEqual(_Armour, 0)
+THEN
+	CharacterApplyStatus(_Character, FEAR, 1, 1, %Caster)
+ENDIF
+
+//SKILL -> BansheeShriek
+EVENT OdinSpectre_BansheeShriek
+VARS
+CHARACTER:_Character
+FLOAT:_Armour
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_PROC_BANSHEEDEAF)
+ACTIONS
+IF "c1&c2"
+	CharacterGetStat(_Armour, _Character, PhysicalArmorPoints)
+	IsEqual(_Armour, 0)
+THEN
+	CharacterApplyStatus(_Character, DEAF, 1, 1)
+ENDIF
+
+//SKILL -> INCREMENT_AGONY_STACKS
+EVENT OdinSpectre_Increment_Agony_Stacks
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_PROC_AGONY)
+ACTIONS
+IF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY5)
+THEN
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 2, 0, %Caster)
+	ENDIF
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY4)
+THEN
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 2, 0, %Caster)
+	ENDIF
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY3)
+THEN
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY4, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY4, 2, 0, %Caster)
+	ENDIF
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY2)
+THEN
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY3, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY3, 2, 0, %Caster)
+	ENDIF
+ELIF "c1"
+	CharacterHasStatus(_Character, OdinSpectre_AGONY1)
+THEN
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY2, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY2, 2, 0, %Caster)
+	ENDIF
+ELSE
+	IF "c1"
+		CharacterHasTalent(%Caster, Torturer)
+	THEN
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY1, 3, 1, %Caster)
+	ELSE
+		CharacterApplyStatus(_Character, OdinSpectre_AGONY1, 2, 0, %Caster)
+	ENDIF
+ENDIF
+
+//SKILL -> SPREAD_THE_SICKNESS
+EVENT OdinSpectre_Spread_The_Sickness_05
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_FORCE_AGONY5)
+ACTIONS
+IF "c1"
+	CharacterHasTalent(%Caster, Torturer)
+THEN
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 3, 1, %Caster)
+ELSE
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY5, 2, 0, %Caster)
+ENDIF
+
+//SKILL -> SPREAD_THE_SICKNESS
+EVENT OdinSpectre_Spread_The_Sickness_04
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_FORCE_AGONY4)
+ACTIONS
+IF "c1"
+	CharacterHasTalent(%Caster, Torturer)
+THEN
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY4, 3, 1, %Caster)
+ELSE
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY4, 2, 0, %Caster)
+ENDIF
+
+//SKILL -> SPREAD_THE_SICKNESS
+EVENT OdinSpectre_Spread_The_Sickness_03
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_FORCE_AGONY3)
+ACTIONS
+IF "c1"
+	CharacterHasTalent(%Caster, Torturer)
+THEN
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY3, 3, 1, %Caster)
+ELSE
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY3, 2, 0, %Caster)
+ENDIF
+
+//SKILL -> SPREAD_THE_SICKNESS
+EVENT OdinSpectre_Spread_The_Sickness_02
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_FORCE_AGONY2)
+ACTIONS
+IF "c1"
+	CharacterHasTalent(%Caster, Torturer)
+THEN
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY2, 3, 1, %Caster)
+ELSE
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY2, 2, 0, %Caster)
+ENDIF
+
+//SKILL -> SPREAD_THE_SICKNESS
+EVENT OdinSpectre_Spread_The_Sickness_01
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusAttempt(_Character, OdinSpectre_FORCE_AGONY1)
+ACTIONS
+IF "c1"
+	CharacterHasTalent(%Caster, Torturer)
+THEN
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY1, 3, 1, %Caster)
+ELSE
+	CharacterApplyStatus(_Character, OdinSpectre_AGONY1, 2, 0, %Caster)
+ENDIF

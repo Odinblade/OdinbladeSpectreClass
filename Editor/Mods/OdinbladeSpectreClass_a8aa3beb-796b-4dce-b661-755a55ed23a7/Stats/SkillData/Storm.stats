@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="f1d6f2b9-0848-426d-8169-c3946d47c9a4">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_AgonyOfTheDamned" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="TargetRadius" type="IntegerStatObjectFieldDefinition" value="17" />
+        <field name="AreaRadius" type="IntegerStatObjectFieldDefinition" value="10" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="NonSelf;Enemy" />
+        <field name="OverrideSkillLevel" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="DeathType" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="Death Type" />
+        <field name="HitRadius" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Lifetime" type="IntegerStatObjectFieldDefinition" value="2" />
+        <field name="MinHitsPerTurn" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="MaxHitsPerTurn" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="HitDelay" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 5" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_AgonyOfTheDamned" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Agony of the Damned" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Conjure a storm of malefic souls, causing them to rain down on 6 targets for 2 turns, each dealing [1]. &lt;br&gt;&lt;br&gt;The souls also apply &lt;font color=&quot;#67ffdd&quot;&gt;five Agony&lt;/font&gt; stacks each hit, dealing [2] on-apply and each turn." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="120" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_air_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_air_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Prepare_04,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_02:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_aoe_air_01_cast" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Cast_Cone_Air_Tornado_Hand_01:Dummy_L_HandFX;RS3_FX_Skills_Air_Cast_Cone_Air_Tornado_Hand_Cast_01:Dummy_L_HandFX,Dummy_R_HandFX:cast" />
+        <field name="TargetEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Air_Target_Lightning_01" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="3" />
+        <field name="ProjectileSkills" type="StringStatObjectFieldDefinition" value="ProjectileStrike_OdinSpectre_AgonyBolt" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Skill:ProjectileStrike_OdinSpectre_AgonyBolt:Damage;Weapon:Damage_OdinSpectre_Agony5:Damage;" />
+        <field name="StormEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Storm_01" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

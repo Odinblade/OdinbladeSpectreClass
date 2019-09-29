@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" time="1534605915" />
+    <version major="3" minor="6" revision="0" build="3" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="e4a5c8ca-7f04-23ab-8115-18161eb702bf" type="23" />
+            <attribute id="Name" value="OdinbladeSpectreClass" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="53a3de42-dfc6-423d-9c1d-71a9ab6d379a" type="23" />
+        </node>
+    </region>
+</save>

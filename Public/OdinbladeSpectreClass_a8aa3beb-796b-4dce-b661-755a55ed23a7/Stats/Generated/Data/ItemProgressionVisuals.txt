@@ -1,0 +1,94 @@
+new itemgroup "OdinSpectre_Scythes_2H"
+
+add levelgroup 1,3,"Common"
+add rootgroup "174ef595-3024-4518-962b-5acf937efc6b",""
+add namegroup "OdinSpectre_ImprovisedScythe","",""
+
+add levelgroup 4,7,"Common"
+add rootgroup "1b19005b-2c58-47c6-8b60-e678639343d3","DwarvesCommon"
+add namegroup "OdinSpectre_CommonScythe","",""
+
+add levelgroup 8,11,"Common"
+add rootgroup "51381223-bcb8-4ebb-95a3-95cf80237249","HumansStaffACommon"
+add namegroup "OdinSpectre_CommonScythe","",""
+
+add levelgroup 12,15,"Common"
+add rootgroup "3018e10c-1cb8-45d1-a61c-cc1088b66bc5","ElvesShieldUncommon"
+add namegroup "OdinSpectre_CommonScythe","",""
+
+add levelgroup 16,0,"Common"
+add rootgroup "3018e10c-1cb8-45d1-a61c-cc1088b66bc5","DwarvesCommon"
+add namegroup "OdinSpectre_CommonScythe","",""
+
+add levelgroup 1,3,"Uncommon"
+add rootgroup "174ef595-3024-4518-962b-5acf937efc6b","ElvesShieldUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 4,7,"Uncommon"
+add rootgroup "1b19005b-2c58-47c6-8b60-e678639343d3","DwarvesUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 8,11,"Uncommon"
+add rootgroup "51381223-bcb8-4ebb-95a3-95cf80237249","LizardsStaffBUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 12,15,"Uncommon"
+add rootgroup "3018e10c-1cb8-45d1-a61c-cc1088b66bc5","DwarvesUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 16,18,"Uncommon"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","ElvesStaffBUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 19,0,"Uncommon"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","HumansStaffBUncommon"
+add namegroup "OdinSpectre_UncommonScythe","",""
+
+add levelgroup 1,3,"Rare"
+add rootgroup "174ef595-3024-4518-962b-5acf937efc6b","DwarvesRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 4,7,"Rare"
+add rootgroup "1b19005b-2c58-47c6-8b60-e678639343d3","LizardsStaffBRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 8,11,"Rare"
+add rootgroup "51381223-bcb8-4ebb-95a3-95cf80237249","DwarvesRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 12,15,"Rare"
+add rootgroup "3018e10c-1cb8-45d1-a61c-cc1088b66bc5","ElvesStaffBRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 16,18,"Rare"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","HumansStaffBRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 19,0,"Rare"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","LizardsStaffBRare"
+add namegroup "OdinSpectre_RareScythe","",""
+
+add levelgroup 1,3,"Epic"
+add rootgroup "174ef595-3024-4518-962b-5acf937efc6b","LizardsStaffBEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+
+add levelgroup 4,7,"Epic"
+add rootgroup "1b19005b-2c58-47c6-8b60-e678639343d3","DwarvesEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+
+add levelgroup 8,11,"Epic"
+add rootgroup "51381223-bcb8-4ebb-95a3-95cf80237249","ElvesStaffBEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+
+add levelgroup 12,15,"Epic"
+add rootgroup "3018e10c-1cb8-45d1-a61c-cc1088b66bc5","HumansStaffBEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+
+add levelgroup 16,18,"Epic"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","LizardsStaffBEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+
+add levelgroup 19,0,"Epic"
+add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","DwarvesEpic"
+add namegroup "OdinSpectre_EpicScythe","",""
+

@@ -1,0 +1,5 @@
+peace
+nocooldowns
+addSkill Projectile_OdinSpectre_EssenceBolt 
+levelup 1
+[HistoryLimit]30

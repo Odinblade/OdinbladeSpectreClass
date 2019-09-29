@@ -1,0 +1,7 @@
+new skillset "OdinSpectre_Preset_Skills"
+add skill "Target_OdinSpectre_InflictAgony"
+add skill "Projectile_OdinSpectre_EssenceBolt"
+add skill "Shout_OdinSpectre_UnholyRitual"
+new skillset "Summon_OdinSpectre_SpectralBanshee"
+add skill "Target_OdinSpectre_Summon_InflictAgony"
+add skill "Cone_OdinSpectre_Summon_BansheeShriek"

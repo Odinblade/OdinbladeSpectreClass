@@ -1,0 +1,10 @@
+peace
+maxout
+addSkill Shout_FireBrand 
+addSkill Shout_OdinPyro_SelfImmolation 
+addSkill Target_BurnMyEyes 
+maxout
+addSkill Projectile_Chloroform 
+addSkill Summon_OdinPyro_ConjureFlameElemental 
+addSkill Summon_FireSlug 
+[HistoryLimit]30

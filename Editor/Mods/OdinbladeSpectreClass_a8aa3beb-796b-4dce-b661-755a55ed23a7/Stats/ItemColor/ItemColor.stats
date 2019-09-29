@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="d4bbd7d3-eef6-4a97-a253-7fe5d06f83ef">
+  <stat_objects>
+    <stat_object index="0" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="OdinSpectre_PresetColor" />
+        <field name="Primary Color" type="ColorStatObjectFieldDefinition" clear_inherited_value="false" value="#FF5C5C5C" />
+        <field name="Secondary Color" type="ColorStatObjectFieldDefinition" clear_inherited_value="false" value="#FF000000" />
+        <field name="Tertiary Color" type="ColorStatObjectFieldDefinition" clear_inherited_value="false" value="#FF6D998A" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

@@ -1,0 +1,101 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+new treasuretable "ST_OdinSpectre"
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_InflictAgony",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_RaiseSpectralBanshee",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_Bonechill",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_EssenceBolt",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_Purge",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_Dreadfall",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_UnholyRitual",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "1"
+object category "I_SKILLBOOK_OdinSpectre_Languish",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_TormentedVolley",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_EtherealVeil",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_Riftwalk",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_CurseOfVulnerability",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "4"
+object category "I_SKILLBOOK_OdinSpectre_PactOfArtillery",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_SoulPierce",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_Corruption",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_UnderhandedBargain",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_CurseOfWeakness",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_PactOfBrutality",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "9"
+object category "I_SKILLBOOK_OdinSpectre_SeedOfMalice",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_CruelIntent",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_ConduitOfTheCruel",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_MercifulResurrection",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_CurseOfIneptness",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_PactOfImmortality",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "13"
+object category "I_SKILLBOOK_OdinSpectre_SpreadTheSickness",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_AnnhiliatingPurge",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_StyxianPortal",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_RiteOfTheLich",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_SoulExtraction",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_TerribleFate",1,0,0,0,0,0,0,0
+new subtable "1,1"
+StartLevel "16"
+object category "I_SKILLBOOK_OdinSpectre_AgonyOfTheDamned",1,0,0,0,0,0,0,0
+new treasuretable "ST_OdinSpectreWeapon"
+new subtable "2,2;2,2;2,2;3,2"
+object category "OdinSpectre_Scythe",1,1,0,0,0,0,0,0
+object category "OdinSpectre_Scythe",1,0,1,0,0,0,0,0
+object category "OdinSpectre_Scythe",1,0,0,1,0,0,0,0
+object category "OdinSpectre_Scythe",1,0,0,0,1,0,0,0

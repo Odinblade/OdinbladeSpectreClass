@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="9fd4ac7a-fad7-424f-83df-0893eae93c38">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_UnholyRitual" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="4" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinSpectre_MORDANT,100,2;" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 1 " />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_UnholyRitual" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Unholy Ritual" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Morph your resistances into raw power, gaining &lt;font color=&quot;#40b606&quot;&gt;[1] Intelligence&lt;/font&gt; and &lt;font color=&quot;#40b606&quot;&gt;[3] AP Recovery&lt;/font&gt; at the cost of &lt;font color=&quot;#c80030&quot;&gt;[2]% Elemental Resistance&lt;/font&gt;." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Mordant:Intelligence;Potion:Stats_OdinSpectre_Mordant:FireResistance;Potion:Stats_OdinSpectre_Mordant:APRecovery;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_voodoo_01_cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Totem_Cast_Self_Voodoo_Root_01:root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_EtherealVeil" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="6" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="INVISIBLE,100,1;OdinSpectre_GHOSTWALK,100,2;" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 2" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_EtherealVeil" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Ethereal Veil" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Become truly spectral, gaining &lt;font color=&quot;#639594&quot;&gt;Invisibility&lt;/font&gt; for 1 turn and &lt;font color=&quot;#67ffdd&quot;&gt;Ghostwalk&lt;/font&gt; for 2 turns. &lt;br&gt;&lt;br&gt;&lt;font color=&quot;#67ffdd&quot;&gt;Ghostwalk&lt;/font&gt; allows you to ignore surfaces whilst moving." />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="StatsDescription" type="TranslatedStringStatObjectFieldDefinition" value="Breaks when casting or attacking." />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_totem_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_totem_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_shout_02_cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_02:root;OdinSpectre_Impact_01:root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Pact_Artillery" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="2" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinSpectre_PACT_ARTILLERY,100,2;" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 2" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Pact_Artillery" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Pact of Artillery" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Take the &lt;font color=&quot;#c7a758&quot;&gt;Pact of Artillery&lt;/font&gt;, sacrificing &lt;font color=&quot;#c80030&quot;&gt;Movement&lt;/font&gt; to gain &lt;font color=&quot;#40b606&quot;&gt;4m Range&lt;/font&gt;. &lt;br&gt;&lt;br&gt;You may only take one &lt;font color=&quot;#c7a758&quot;&gt;Pact&lt;/font&gt; at a time; taking a new one terminates previous contracts." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Pact_Artillery:MovementBoost;Potion:Stats_OdinSpectre_Pact_Artillery:RangeBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_voodoo_01_cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Totem_Cast_Self_Voodoo_Root_01:root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Pact_Immortality" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="4" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinSpectre_PACT_IMMORTALITY,100,2;" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 4" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Pact_Immortality" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Pact of Immortality" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Take the &lt;font color=&quot;#c7a758&quot;&gt;Pact of Immortality&lt;/font&gt;, sacrificing &lt;font color=&quot;#c80030&quot;&gt;[1]% Damage&lt;/font&gt; to gain &lt;font color=&quot;#40b606&quot;&gt;Immortality&lt;/font&gt;, preventing you from dying. &lt;br&gt;&lt;br&gt;You may only take one &lt;font color=&quot;#c7a758&quot;&gt;Pact&lt;/font&gt; at a time; taking a new one terminates previous contracts." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Pact_Immortality:DamageBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_voodoo_01_cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Totem_Cast_Self_Voodoo_Root_01:root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" value="OdinSpectre_Pact_Brutality" />
+        <field name="ForGameMaster" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="Ability" type="EnumerationStatObjectFieldDefinition" value="9" enumeration_type_name="SkillAbility" />
+        <field name="Tier" type="EnumerationStatObjectFieldDefinition" value="3" enumeration_type_name="SkillTier" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Cooldown" type="IntegerStatObjectFieldDefinition" value="5" />
+        <field name="AIFlags" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="AIFlags" />
+        <field name="SkillProperties" type="StringStatObjectFieldDefinition" value="OdinSpectre_PACT_BRUTALITY,100,2;" />
+        <field name="TargetConditions" type="StringStatObjectFieldDefinition" value="Self" />
+        <field name="UseCharacterStats" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponDamage" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="UseWeaponProperties" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="Autocast" type="EnumerationStatObjectFieldDefinition" value="0" enumeration_type_name="YesNo" />
+        <field name="MemorizationRequirements" type="StringStatObjectFieldDefinition" value="Necromancy 3" />
+        <field name="Icon" type="StringStatObjectFieldDefinition" value="OBSPECTRE_Skill_Pact_Brutality" />
+        <field name="DisplayName" type="TranslatedStringStatObjectFieldDefinition" value="Pact of Brutality" />
+        <field name="Description" type="TranslatedStringStatObjectFieldDefinition" value="Take the &lt;font color=&quot;#c7a758&quot;&gt;Pact of Brutality&lt;/font&gt;, sacrificing &lt;font color=&quot;#c80030&quot;&gt;[1] Constitution&lt;/font&gt; to gain &lt;font color=&quot;#40b606&quot;&gt;[2]% Damage&lt;/font&gt;.&lt;br&gt;&lt;br&gt;You may only take one &lt;font color=&quot;#c7a758&quot;&gt;Pact&lt;/font&gt; at a time; taking a new one terminates previous contracts." />
+        <field name="StatsDescriptionParams" type="StringStatObjectFieldDefinition" value="Potion:Stats_OdinSpectre_Pact_Brutality:Constitution;Potion:Stats_OdinSpectre_Pact_Brutality:DamageBoost;" />
+        <field name="FXScale" type="IntegerStatObjectFieldDefinition" value="100" />
+        <field name="CastTextEvent" type="StringStatObjectFieldDefinition" value="cast" />
+        <field name="Memory Cost" type="IntegerStatObjectFieldDefinition" value="1" />
+        <field name="Magic Cost" type="IntegerStatObjectFieldDefinition" value="0" />
+        <field name="CanTargetCharacters" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="CanTargetItems" type="EnumerationStatObjectFieldDefinition" value="1" enumeration_type_name="YesNo" />
+        <field name="PrepareAnimationInit" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_start" />
+        <field name="PrepareAnimationLoop" type="StringStatObjectFieldDefinition" value="skill_prepare_voodoo_01_loop" />
+        <field name="PrepareEffect" type="StringStatObjectFieldDefinition" value="OdinSpectre_Root_01,KeepRot,Detach:Dummy_Root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+        <field name="CastAnimation" type="StringStatObjectFieldDefinition" value="skill_cast_self_voodoo_01_cast" />
+        <field name="CastEffect" type="StringStatObjectFieldDefinition" value="RS3_FX_Skills_Totem_Cast_Self_Voodoo_Root_01:root;OdinSpectre_Hand_01:Dummy_R_HandFX,Dummy_L_HandFX" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

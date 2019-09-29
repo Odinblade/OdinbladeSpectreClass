@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="48e63fff-81e0-42bb-ac51-39f5904b97be">
+  <stat_objects>
+    <stat_object index="0" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Agony1" />
+      </fields>
+    </stat_object>
+    <stat_object index="1" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Agony2" />
+      </fields>
+    </stat_object>
+    <stat_object index="2" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Agony3" />
+      </fields>
+    </stat_object>
+    <stat_object index="3" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Agony4" />
+      </fields>
+    </stat_object>
+    <stat_object index="4" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Agony5" />
+      </fields>
+    </stat_object>
+    <stat_object index="5" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Purged1" />
+      </fields>
+    </stat_object>
+    <stat_object index="6" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Purged2" />
+      </fields>
+    </stat_object>
+    <stat_object index="7" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Purged3" />
+      </fields>
+    </stat_object>
+    <stat_object index="8" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Purged4" />
+      </fields>
+    </stat_object>
+    <stat_object index="9" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Purged5" />
+      </fields>
+    </stat_object>
+    <stat_object index="10" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Mordant" />
+        <field name="Intelligence" type="EnumerationStatObjectFieldDefinition" clear_inherited_value="false" value="131" enumeration_type_name="Penalty PreciseQualifier" />
+        <field name="FireResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="EarthResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="WaterResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="AirResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="PoisonResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="APRecovery" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="1" />
+      </fields>
+    </stat_object>
+    <stat_object index="11" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Wither" />
+        <field name="MovementSpeedBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-25" />
+        <field name="AccuracyBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-20" />
+      </fields>
+    </stat_object>
+    <stat_object index="12" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Curse_Vulnerable" />
+        <field name="PiercingResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-25" />
+      </fields>
+    </stat_object>
+    <stat_object index="13" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Curse_Weakness" />
+        <field name="DamageBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-20" />
+      </fields>
+    </stat_object>
+    <stat_object index="14" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Curse_Inept" />
+        <field name="APCostBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="1" />
+      </fields>
+    </stat_object>
+    <stat_object index="15" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Dread" />
+        <field name="PiercingResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="PhysicalResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+      </fields>
+    </stat_object>
+    <stat_object index="16" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Perish" />
+        <field name="PhysicalResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-15" />
+        <field name="Constitution" type="EnumerationStatObjectFieldDefinition" clear_inherited_value="false" value="71" enumeration_type_name="Penalty PreciseQualifier" />
+        <field name="Wits" type="EnumerationStatObjectFieldDefinition" clear_inherited_value="false" value="71" enumeration_type_name="Penalty PreciseQualifier" />
+      </fields>
+    </stat_object>
+    <stat_object index="17" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Ghostwalk" />
+        <field name="Flags" type="StringStatObjectFieldDefinition" clear_inherited_value="false" value="Floating" />
+      </fields>
+    </stat_object>
+    <stat_object index="18" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Pact_Artillery" />
+        <field name="MovementSpeedBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-100" />
+        <field name="RangeBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="400" />
+      </fields>
+    </stat_object>
+    <stat_object index="19" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Pact_Immortality" />
+        <field name="DamageBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-30" />
+      </fields>
+    </stat_object>
+    <stat_object index="20" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Pact_Brutality" />
+        <field name="Constitution" type="EnumerationStatObjectFieldDefinition" clear_inherited_value="false" value="71" enumeration_type_name="Penalty PreciseQualifier" />
+        <field name="DamageBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="20" />
+      </fields>
+    </stat_object>
+    <stat_object index="21" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_UnderhandedBargain" />
+        <field name="Initiative" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="3" />
+        <field name="ActionPoints" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object index="22" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_SeedOfMalice" />
+        <field name="PiercingResistance" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-15" />
+      </fields>
+    </stat_object>
+    <stat_object index="23" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Lamented" />
+        <field name="MovementSpeedBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-25" />
+        <field name="DamageBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-10" />
+        <field name="Duration" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object index="24" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Exalted" />
+        <field name="Movement" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="200" />
+        <field name="DamageBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="10" />
+        <field name="Duration" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object index="25" is_substat="false">
+      <fields>
+        <field name="Name" type="NameStatObjectFieldDefinition" clear_inherited_value="false" value="Stats_OdinSpectre_Ascended" />
+        <field name="SPCostBoost" type="IntegerStatObjectFieldDefinition" clear_inherited_value="false" value="-1" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

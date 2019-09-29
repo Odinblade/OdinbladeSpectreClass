@@ -1,0 +1,48 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+//REGION SPECTRE_Reset
+IF
+ObjectFlagSet("Odinblade_SPECTRE_StartDialog", _Char, _Int)
+AND
+CharacterGetLevel((CHARACTERGUID)_Char, _Lvl)
+THEN
+DB_OdinbladeSpectre_Reset(_Char, _Lvl);
+
+IF
+ObjectFlagSet("Odinblade_SPECTRE_Malthus", _Malthus, _Dis)
+THEN
+DB_OdinbladeSpectre_Malthus(_Malthus);
+
+IF
+ObjectFlagSet("Odinblade_SPECTRE_Reset", _Char, _Int)
+AND
+CharacterGetEquippedItem((CHARACTERGUID)_Char, "Amulet", _Item)
+AND
+GetTemplate(_Item, _Template)
+AND
+DB_OdinbladeSpectre_Reset((CHARACTERGUID)_Char, _Lvl)
+AND
+DB_OdinbladeSpectre_Malthus(_Malthus)
+THEN
+TransferItemsToCharacter((CHARACTERGUID)_Char, (CHARACTERGUID)_Malthus);
+CharacterApplyPreset(_Char, "Spectre");
+CharacterLevelUpTo(_Char, _Lvl);
+TransferItemsToCharacter((CHARACTERGUID)_Malthus, (CHARACTERGUID)_Char);
+ItemTemplateAddTo(_Template,_Char,1,0);
+Proc_GLO_SourceCollars_EquipSourceCollar(_Char);
+//ItemLockUnEquip(_Item,1);
+NOT DB_OdinbladeSpectre_Reset(_Char, _Lvl);
+//END_REGION
+
+//REGION
+IF
+SavegameLoaded(_,_,_,_)
+THEN
+TimerLaunch("OdinCORE_CheckDependencies", 120);
+//END_REGION
+EXITSECTION
+
+ENDEXITSECTION

@@ -1,0 +1,52 @@
+new equipment "OdinSpectre_Equipment_Start"
+add equipmentgroup
+add equipment entry "ARM_Purge_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_LowerBody"
+add equipmentgroup
+add equipment entry "WPN_OdinSpectre_Scythe"
+add equipmentgroup
+add equipment entry "POTION_Minor_Healing_Potion"
+add equipmentgroup
+add equipment entry "SCROLL_Resurrect"
+add equipmentgroup
+add equipment entry "CONT_Backpack_A_SourceHunter"
+
+new equipment "OdinSpectre_Equipment_Start_Undead"
+add equipmentgroup
+add equipment entry "ARM_Purge_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_LowerBody"
+add equipmentgroup
+add equipment entry "ARM_Purge_Helmet"
+add equipmentgroup
+add equipment entry "ARM_Purge_Boots"
+add equipmentgroup
+add equipment entry "ARM_Purge_Gloves"
+add equipmentgroup
+add equipment entry "WPN_OdinSpectre_Scythe"
+add equipmentgroup
+add equipment entry "CON_Potion_Poison_A"
+add equipmentgroup
+add equipment entry "SCROLL_Resurrect"
+add equipmentgroup
+add equipment entry "CONT_Backpack_A_SourceHunter"
+
+new equipment "OdinSpectre_Preset_Gear"
+add equipmentgroup
+add equipment entry "ARM_OdinSpectre_Preset_Helmet"
+add equipmentgroup
+add equipment entry "ARM_OdinSpectre_Preset_UpperBody"
+add equipmentgroup
+add equipment entry "ARM_OdinSpectre_Preset_LowerBody"
+add equipmentgroup
+add equipment entry "ARM_OdinSpectre_Preset_Gloves"
+add equipmentgroup
+add equipment entry "ARM_OdinSpectre_Preset_Boots"
+add equipmentgroup
+add equipment entry "WPN_OdinSpectre_Scythe"
+
+new equipment "Summon_OdinSpectre_SpectralBanshee"
+add equipmentgroup
+add equipment entry "_ARX_Paladin_Melee_Sword_Air"
+
