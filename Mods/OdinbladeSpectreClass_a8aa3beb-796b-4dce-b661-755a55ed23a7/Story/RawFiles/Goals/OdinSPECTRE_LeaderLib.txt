@@ -1,0 +1,17 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+StoryEvent(_, "LeaderLib_Initialized")
+THEN
+DB_Mods_Registered("Odinblade_Spectre", "Odinblade", "1.1.4.0");
+DB_LeaderLib_ModApi_RegisterPreset("OdinbladeClasses", "Spectre", "Spectre [Odinblade's Spectre]", "Odinblade_Spectre_IsActive");
+DB_LeaderLib_ModApi_RegisterActiveGoal("Odinblade_Spectre", "Odinblade", "OdinSPECTRE_DiscrepencyWarnings");
+DB_LeaderUpdater_RegisteredUUID("Odinblade_Spectre", "Odinblade", e4a5c8ca-7f04-23ab-8115-18161eb702bf);
+GoalCompleted;
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

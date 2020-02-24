@@ -28,7 +28,7 @@ AND
 DB_OdinbladeSpectre_Malthus(_Malthus)
 THEN
 TransferItemsToCharacter((CHARACTERGUID)_Char, (CHARACTERGUID)_Malthus);
-CharacterApplyPreset(_Char, "Spectre");
+Proc_ApplyPreset(_Char, "Spectre");
 CharacterLevelUpTo(_Char, _Lvl);
 TransferItemsToCharacter((CHARACTERGUID)_Malthus, (CHARACTERGUID)_Char);
 ItemTemplateAddTo(_Template,_Char,1,0);
