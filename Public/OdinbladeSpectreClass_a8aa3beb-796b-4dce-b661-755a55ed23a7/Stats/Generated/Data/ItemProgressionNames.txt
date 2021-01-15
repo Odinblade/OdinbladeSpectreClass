@@ -13,3 +13,5 @@ add name "Wicked Scythe","A Spectre's signature weapon."
 new namegroup "OdinSpectre_EpicScythe"
 add name "Malefic Scythe","A Spectre's signature weapon."
 
+new namegroup "OdinSpectre_Sickle"
+add name "Unholy Sickle","When a Spectre wants to get really visceral, this is their tool of choice."

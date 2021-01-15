@@ -92,3 +92,8 @@ add levelgroup 19,0,"Epic"
 add rootgroup "c2a2c42e-7ba1-4c6d-9b9c-837544966e01","DwarvesEpic"
 add namegroup "OdinSpectre_EpicScythe","",""
 
+new itemgroup "OdinSpectre_Sickles_1H"
+
+add levelgroup 0,0,"All"
+add rootgroup "eef2149c-c0c4-4e4d-81ec-cc22bf52b3a0",""
+add namegroup "OdinSpectre_Sickle","",""

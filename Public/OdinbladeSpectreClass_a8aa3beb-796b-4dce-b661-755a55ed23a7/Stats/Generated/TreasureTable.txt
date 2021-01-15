@@ -99,3 +99,8 @@ object category "OdinSpectre_Scythe",1,1,0,0,0,0,0,0
 object category "OdinSpectre_Scythe",1,0,1,0,0,0,0,0
 object category "OdinSpectre_Scythe",1,0,0,1,0,0,0,0
 object category "OdinSpectre_Scythe",1,0,0,0,1,0,0,0
+new subtable "2,2;2,2;2,2;3,2"
+object category "OdinSpectre_Sickle",1,1,0,0,0,0,0,0
+object category "OdinSpectre_Sickle",1,0,1,0,0,0,0,0
+object category "OdinSpectre_Sickle",1,0,0,1,0,0,0,0
+object category "OdinSpectre_Sickle",1,0,0,0,1,0,0,0
